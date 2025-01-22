@@ -13,6 +13,21 @@
 <br>
 <br>
 
+
+
+## Results
+We achieved satisfactory results considering the high computational cost of the algorithm. Despite the absence of parallelization, we managed to achieve low MSE values even for functions in higher dimensions, with the exception of a couple of particularly challenging cases. The results could be improved by considering a larger population, more generations and further hyperparameter tuning. <br>
+Using three distinct subpopulations streamlined the tuning of exploitation and exploration parameters by assigning these roles to different groups. Population 3, which operated with a delay relative to Population 2, effectively reduced the risk of premature convergence. Population 2 concentrated on determining an optimal size by working with larger trees, while Population 1 emphasized exploration. The average depth of the preceding subpopulation served as the foundation for defining the optimal size in each group, resulting in an "adaptive" approach to size determination.
+<br><br>
+In particular the algorithm performed:
+1. very well with the Problems 1, 3, 4, 5, 6
+2. well with Problems 7, 8
+3. not that well with Problem 2 (it could not converge in time to a reasonable result)
+<br>
+<br>
+
+
+
 ## Algorithm Overview
 Each individual in the population is represented by the class **IndividualTree**, which is made up of nodes of the **Node** class. The tree has a pointer to its root node, and each node has pointers to its parent, left child, and right child. Possible operations can be unary (considered only left child) or binary (considered both children). 
 
@@ -121,18 +136,6 @@ def SymbolicRegressionMULTIPOP(xx, yy, population_size=50, max_generations=100, 
 <br>
 <br>
 
-## Results
-We achieved satisfactory results considering the high computational cost of the algorithm. Despite the absence of parallelization, we managed to achieve low MSE values even for functions in higher dimensions, with the exception of a couple of particularly challenging cases. The results could be improved by considering a larger population, more generations and further hyperparameter tuning. <br>
-Using three distinct subpopulations streamlined the tuning of exploitation and exploration parameters by assigning these roles to different groups. Population 3, which operated with a delay relative to Population 2, effectively reduced the risk of premature convergence. Population 2 concentrated on determining an optimal size by working with larger trees, while Population 1 emphasized exploration. The average depth of the preceding subpopulation served as the foundation for defining the optimal size in each group, resulting in an "adaptive" approach to size determination.
-<br><br>
-In particular the algorithm performed:
-1. very well with the Problems 1, 3, 4, 5, 6
-2. well with Problems 7, 8
-3. not that well with Problem 2 (it could not converge in time to a reasonable result)
-
-
-<br>
-<br>
 
 
 
