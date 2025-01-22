@@ -6,7 +6,7 @@
 <br>
 
 ## Introduction
-  Each problem (1-8) has its own set of HYPERPARAMETERS defined at the beginning of the code. To prevent overfitting, we used only the training set (80% of all the samples) to build the formula, while the test set was used to evaluate the performance on unseen data. We implemented a Symbolic Regression using the steady-state approach. We also used an ISLAND MODEL, consisting of three islands: migrants moved from Pop1 to Pop2, from Pop2 to Pop3, and from Pop3 back to Pop1. <br>
+  Each problem (1-8) has its own set of hyperparameters defined at the beginning of the code. To prevent overfitting, we used only the training set (80% of all the samples) to build the formula, while the test set was used to evaluate the performance on unseen data. We implemented a Symbolic Regression using the steady-state approach. We also used an ISLAND MODEL, consisting of three islands: migrants moved from Pop1 to Pop2, from Pop2 to Pop3, and from Pop3 back to Pop1. <br>
   
   ![image](https://github.com/user-attachments/assets/a7c218c9-32cb-4bcf-b1ba-74b8b873004c)
 
